@@ -30,6 +30,6 @@ jobs:
        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
       run: echo $DOCKERHUB_PASSWORD | docker login --username philipkraeutl --password-stdin
     - name: Build docker image
-      run: docker build -f Dockerfile -t philipkraeutl@demo:latest ./ 
+      run: docker build -f Dockerfile -t philipkraeutl/demo:latest ./ 
     - name: Tag docker
       run: docker tag philipkraeutl@demo:latest philipkraeutl/demo:$GIT_SHA
