@@ -30,8 +30,8 @@ jobs:
       env: 
        DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
       with: 
-        username: philipkraeutl
-        password: $DOCKERHUB_PASSWORD
+        username: ${{ DOCKERHUB_USER }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
     - name: Build docker image
       uses: docker/build-push-action@v4.0.0
       with:
