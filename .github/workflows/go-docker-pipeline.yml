@@ -40,4 +40,10 @@ jobs:
        tags: |
         philipkraeutl/demo:latest
         philipkraeutl/demo:${{github.sha}}
+    - name: Vulnerability Scan
+      uses: aquasecurity/trivy-action@0.10.0
+      with: 
+       image-ref:  philipkraeutl/demo:${{github.sha}}
+       severity: 'CRITICAL,HIGH'
+       
     
