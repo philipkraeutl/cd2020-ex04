@@ -33,7 +33,7 @@ jobs:
         username: philipkraeutl
         password: $DOCKERHUB_PASSWORD
     - name: Build docker image
-      uses: docker/build-push-action@v4.0
+      uses: docker/build-push-action@v4.0.0
       with:
        file: ./Dockerfile
        push: true
